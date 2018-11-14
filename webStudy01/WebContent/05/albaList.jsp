@@ -22,7 +22,7 @@
 	</thead>
 	<tbody>
 	<%
-		Map<String, AlbasengVO> albaMap = SimpleFormProcessServlet.albasengs;
+		Map<String, AlbasengVO> albaMap = (Map<String,AlbasengVO>) application.getAttribute("albasengs");
 		for(Entry<String, AlbasengVO> entry :albaMap.entrySet()){
 			String pattern = "<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>";
 			AlbasengVO alba = entry.getValue();
